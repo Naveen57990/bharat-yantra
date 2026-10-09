@@ -18,6 +18,18 @@
   "source_terms": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
   "spatial_resolution_metres_nominal": 30,
   "crs": "EPSG:32643",
+  "bounds_projected_metres": {
+    "west": 270840.0,
+    "south": 2098800.0,
+    "east": 276780.0,
+    "north": 2105100.0
+  },
+  "bounds_wgs84": {
+    "west": 72.82278552118859,
+    "south": 18.968885577975055,
+    "east": 72.8799125011753,
+    "north": 19.02643796309007
+  },
   "buffer_metres": 1000,
   "valid_pixel_count": 30029,
   "nodata_pixel_count": 11551,

@@ -8,10 +8,8 @@ from pathlib import Path
 from typing import Any
 
 import geopandas as gpd
-import rasterio
 from fastapi import HTTPException
 from pydantic import BaseModel, Field
-from rasterio.warp import transform_bounds
 from shapely.geometry import shape
 
 
@@ -98,8 +96,9 @@ def flood_evidence() -> dict[str, Any]:
     drain_summary = drainage.get("drains", {})
     manhole_summary = drainage.get("manholes", {})
     connectivity = drainage.get("connectivity_diagnostic", {})
-    with rasterio.open(TERRAIN_PATH) as source:
-        terrain_bounds = transform_bounds(source.crs, "EPSG:4326", *source.bounds, densify_pts=21)
+    terrain_bounds = terrain.get("bounds_wgs84")
+    if not isinstance(terrain_bounds, dict) or not all(key in terrain_bounds for key in ("west", "south", "east", "north")):
+        raise HTTPException(status_code=503, detail="The local terrain bounds are unavailable in the terrain manifest.")
     area = _ward_area_m2()
     return {
         "ward": {
@@ -124,7 +123,7 @@ def flood_evidence() -> dict[str, Any]:
             "valid_elevation_range_m": terrain.get("valid_elevation_range_metres"),
             "valid_pixels": terrain.get("valid_pixel_count"),
             "nodata_pixels": terrain.get("nodata_pixel_count"),
-            "bounds_wgs84": {"west": terrain_bounds[0], "south": terrain_bounds[1], "east": terrain_bounds[2], "north": terrain_bounds[3]},
+            "bounds_wgs84": terrain_bounds,
             "limitations": terrain.get("limitations", []),
             "use": "Regional elevation context only; not a street-level flood depth or validated water-flow surface.",
         },
