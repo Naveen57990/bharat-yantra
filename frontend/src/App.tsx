@@ -1305,16 +1305,22 @@ function App() {
       <div className="workspace">
         <aside className="sidebar" id="overview">
           <div className="sidebar-heading">
-            <span className="section-index">MUMBAI · F/S WARD</span>
-            <h1>Choose what<br />you want to do.</h1>
-            <p className="lede">Each section opens one planning feature. Results appear on the map.</p>
+            <div className="control-room-kicker"><span className="control-room-pulse" /> MUMBAI OPERATIONS DESK <span>·</span> F/S WARD</div>
+            <h1>Plan with the<br />whole ward in view.</h1>
+            <p className="lede">Explore a scenario, compare options and see every result on the map.</p>
           </div>
 
           <section className="ward-card" aria-label="Ward selection status">
-            <div className="card-label">TEST WARD</div>
+            <div className="ward-card-top"><div className="card-label">ACTIVE STUDY AREA</div><span className="ward-stage">STAGE 1</span></div>
             <div className="ward-name">{wardName}</div>
-            <div className="ward-status"><span className={`status-pill ${localSourcePreview ? "selected" : "pending"}`} /> {localSourcePreview ? "Working testbed selected" : "Selection required"}</div>
-            <p>F/S Ward is the current study area.</p>
+            <div className="ward-status"><span className={`status-pill ${localSourcePreview ? "selected" : "pending"}`} /> {localSourcePreview ? "Map data loaded" : "Study area selected"}</div>
+            <p>Mumbai, Maharashtra <span>·</span> Ward-scale planning workspace</p>
+          </section>
+
+          <section className="control-room-metrics" aria-label="Available mapped evidence">
+            <div><strong>{accessSummary ? accessSummary.mapped_health_facilities_inside_ward.toLocaleString() : "—"}</strong><span>Mapped health facilities</span></div>
+            <div><strong>{floodScreeningAreas ? floodScreeningAreas.all_cells.length.toLocaleString() : "—"}</strong><span>Terrain review cells</span></div>
+            <div><strong>{rainfallSeries ? rainfallSeries.records.length.toLocaleString() : "—"}</strong><span>Rain observations</span></div>
           </section>
 
           <section className="flood-lab" id="flood-lab" aria-label="Flood evidence and rainfall scenario laboratory">

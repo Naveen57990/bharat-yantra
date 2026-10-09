@@ -1224,3 +1224,233 @@ button, input, select, textarea { font-family: inherit; }
 }
 .investment-intro { color: #b9c2b7; }
 .decision-pros-cons { grid-template-columns: 1fr; gap: 10px; }
+
+/* Bharat Yantra · ward operations control room */
+:root {
+  --ink: #f1f0e8;
+  --muted: #b3bcb1;
+  --subtle: #8f9b91;
+  --accent: #d8b46c;
+  --mint: #9ac8a7;
+}
+
+.app-shell {
+  background: #0d1512;
+  color: var(--ink);
+}
+
+.topbar {
+  height: 80px;
+  padding-inline: clamp(22px, 3vw, 48px);
+  border-color: rgba(229, 226, 207, .12);
+  background: rgba(13, 21, 18, .96);
+  box-shadow: 0 8px 28px rgba(0,0,0,.12);
+}
+
+.brand { min-width: 254px; }
+.brand-name { font-size: 15px; }
+.brand-tagline { color: #aab4a8; font-size: 12px; }
+.brand-mark { width: 36px; height: 36px; border-radius: 10px; }
+
+.topbar-nav {
+  gap: 4px;
+  max-width: calc(100% - 270px);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.topbar-nav::-webkit-scrollbar { display: none; }
+.topbar-nav button {
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #bdc5bb;
+  font-size: 14px;
+  font-weight: 560;
+  white-space: nowrap;
+}
+.topbar-nav button:hover, .topbar-nav button:focus-visible {
+  border-color: rgba(216,180,108,.2);
+  background: rgba(216,180,108,.1);
+  color: #f4e5bd;
+}
+
+.workspace {
+  grid-template-columns: minmax(470px, 1.04fr) minmax(0, .96fr);
+  height: calc(100% - 80px);
+}
+
+.sidebar {
+  padding: clamp(26px, 3vw, 44px) clamp(26px, 4vw, 62px) 32px;
+  border-right-color: rgba(229,226,207,.12);
+  background:
+    radial-gradient(ellipse at 15% 0%, rgba(81,111,82,.16), transparent 42%),
+    linear-gradient(155deg, #16211c 0%, #101915 70%, #0d1512 100%);
+  scrollbar-color: rgba(216,180,108,.35) transparent;
+}
+
+.sidebar-heading { animation: control-room-arrive .7s cubic-bezier(.2,.72,.24,1) both; }
+.control-room-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #c1c8bb;
+  font: 600 12px/1.4 "DM Sans", sans-serif;
+  letter-spacing: .12em;
+}
+.control-room-kicker > span:last-child { color: #8b9889; }
+.control-room-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #91c29b;
+  box-shadow: 0 0 0 5px rgba(145,194,155,.12), 0 0 18px rgba(145,194,155,.28);
+  animation: status-breathe 2.8s ease-in-out infinite;
+}
+.sidebar-heading h1 {
+  max-width: 660px;
+  margin: 23px 0 16px;
+  color: #f3f0e6;
+  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
+  font-size: clamp(43px, 4.3vw, 62px);
+  font-weight: 560;
+  line-height: 1.02;
+  letter-spacing: -.055em;
+}
+.sidebar-heading .lede { max-width: 560px; color: #b2bdb1; font-size: 17px; line-height: 1.55; }
+
+.ward-card {
+  margin-top: 27px;
+  padding: 20px 22px 18px;
+  border: 1px solid rgba(216,180,108,.28);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(216,180,108,.11), rgba(255,255,255,.025) 72%);
+  box-shadow: 0 16px 34px rgba(0,0,0,.16), inset 0 1px rgba(255,255,255,.045);
+}
+.ward-card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.ward-stage { padding: 5px 8px; border: 1px solid rgba(216,180,108,.24); border-radius: 6px; color: #d7bd84; font: 600 10px "DM Mono", monospace; letter-spacing: .08em; }
+.ward-name { margin-top: 13px; font-size: 25px; }
+.ward-status { margin-top: 9px; color: #dfc88f; font-size: 14px; }
+.status-pill { width: 8px; height: 8px; box-shadow: 0 0 0 4px rgba(145,194,155,.1); }
+.status-pill.selected { background: #91c29b; }
+.ward-card p { margin-top: 12px; color: #b1b9ae; font-size: 14px; }
+.ward-card p span { padding-inline: 4px; color: #718075; }
+
+.control-room-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 18px 0 23px;
+}
+.control-room-metrics > div {
+  display: grid;
+  min-height: 82px;
+  align-content: center;
+  gap: 6px;
+  padding: 13px 15px;
+  border: 1px solid rgba(227,230,214,.11);
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.018));
+  transition: transform .25s ease, border-color .25s ease, background .25s ease;
+}
+.control-room-metrics > div:hover { transform: translateY(-2px); border-color: rgba(216,180,108,.32); background: rgba(216,180,108,.07); }
+.control-room-metrics strong { color: #f1e6c8; font: 600 27px/1 "Avenir Next", sans-serif; letter-spacing: -.04em; }
+.control-room-metrics span { color: #aeb8ad; font-size: 13px; line-height: 1.3; }
+
+.flood-lab, .access-lab, .policy-lab, .assistant-lab {
+  margin-top: 16px;
+  border: 1px solid rgba(224,229,210,.13);
+  border-radius: 16px;
+  background: linear-gradient(150deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+  box-shadow: 0 14px 30px rgba(0,0,0,.1);
+  overflow: clip;
+}
+.lab-disclosure > summary, .policy-disclosure > summary {
+  min-height: 116px;
+  padding: 22px 24px;
+  border-top: 2px solid rgba(216,180,108,.78);
+  border-radius: 15px;
+  background: transparent;
+}
+.access-disclosure > summary { border-top-color: rgba(145,194,155,.75); }
+.lab-disclosure > summary strong, .policy-disclosure > summary strong { color: #f0eee4; font-size: 21px; letter-spacing: -.025em; }
+.lab-summary-hint, .policy-summary-hint { max-width: 90%; color: #b1bbb0; font-size: 15px; line-height: 1.5; }
+.lab-disclosure[open] > summary, .policy-disclosure[open] > summary { border-radius: 15px 15px 0 0; background: rgba(255,255,255,.035); }
+.lab-disclosure-content, .policy-disclosure-content { padding: 18px 22px 22px; animation: control-room-arrive .32s ease both; }
+.section-index, .card-label, .map-kicker { color: #b0b9aa; font-size: 11px; letter-spacing: .13em; }
+
+.map-panel {
+  min-width: 0;
+  border-left: 1px solid rgba(229,226,207,.08);
+  background: #111b18;
+}
+.map-header {
+  height: 88px;
+  flex-basis: 88px;
+  padding-inline: clamp(20px, 2.5vw, 38px);
+  border-color: rgba(229,226,207,.1);
+  background: linear-gradient(90deg, #17221d, #111b18);
+}
+.map-kicker { color: #a8b1a5; font-size: 11px; }
+.map-header h2 { margin-top: 8px; color: #f0eee5; font-size: 22px; }
+.map-subtitle { color: #b4bdb2; font-size: 14px; }
+.scene-badge { border-radius: 9px; font-size: 11px; }
+.map-footer { min-height: 50px; height: auto; flex-basis: 50px; padding-inline: 20px; color: #aeb7ac; font-size: 12px; }
+.map-footer-right { color: #a2aea1; font-size: 10px; }
+.source-credits { color: #e4e6db; font-size: 10px; }
+.scenario-map-legend { border-radius: 12px; padding: 13px 15px; font: 11px/1.4 "DM Mono", monospace; }
+
+@keyframes control-room-arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes status-breathe { 0%, 100% { box-shadow: 0 0 0 4px rgba(145,194,155,.1), 0 0 14px rgba(145,194,155,.22); } 50% { box-shadow: 0 0 0 7px rgba(145,194,155,.035), 0 0 20px rgba(145,194,155,.38); } }
+
+@media (max-width: 1180px) {
+  .topbar { padding-inline: 22px; }
+  .topbar-nav { max-width: calc(100% - 250px); }
+  .topbar-nav button { padding-inline: 9px; font-size: 13px; }
+  .workspace { grid-template-columns: minmax(420px, 1.02fr) minmax(0, .98fr); }
+  .sidebar { padding-inline: 30px; }
+}
+@media (max-width: 900px) {
+  .workspace { grid-template-columns: minmax(370px, 1fr) minmax(0, .92fr); }
+  .sidebar { padding-inline: 24px; }
+  .sidebar-heading h1 { font-size: clamp(40px, 5.4vw, 52px); }
+  .control-room-metrics > div { padding-inline: 11px; }
+  .control-room-metrics span { font-size: 12px; }
+}
+@media (max-width: 760px) {
+  body { overflow: auto; }
+  .app-shell { min-height: 100%; height: auto; }
+  .topbar { position: sticky; top: 0; z-index: 20; height: auto; min-height: 106px; padding: 9px 16px 7px; flex-wrap: wrap; row-gap: 4px; }
+  .brand { flex: 0 0 100%; min-width: 0; }
+  .brand-tagline { font-size: 11px; }
+  .topbar-nav { display: flex; width: 100%; max-width: 100%; min-width: 0; gap: 3px; overflow-x: auto; }
+  .topbar-nav button { flex: 0 0 auto; min-height: 38px; padding-inline: 10px; font-size: 13px; }
+  .workspace { display: flex; height: auto; min-height: unset; flex-direction: column; }
+  .sidebar { order: 0; padding: 28px 22px; border-right: 0; border-bottom: 1px solid rgba(229,226,207,.12); overflow: visible; }
+  .sidebar-heading h1 { margin-top: 18px; font-size: clamp(39px, 10vw, 54px); }
+  .sidebar-heading .lede { font-size: 16px; }
+  .ward-card { margin-top: 23px; }
+  .control-room-metrics { gap: 8px; margin-top: 14px; }
+  .control-room-metrics > div { min-height: 76px; padding: 10px; }
+  .control-room-metrics strong { font-size: 23px; }
+  .control-room-metrics span { font-size: 11px; }
+  .map-panel { order: 1; min-height: 620px; border-left: 0; }
+  .map-header { height: 78px; flex-basis: 78px; padding-inline: 18px; }
+  .map-header h2 { font-size: 19px; }
+  .map-footer { min-height: 50px; padding-inline: 14px; }
+}
+@media (max-width: 480px) {
+  html, body, #root { min-width: 360px; }
+  .topbar { padding-inline: 12px; }
+  .sidebar { padding-inline: 16px; }
+  .control-room-kicker { gap: 7px; font-size: 10px; }
+  .control-room-metrics > div { min-height: 72px; padding: 8px; }
+  .control-room-metrics strong { font-size: 21px; }
+  .control-room-metrics span { font-size: 10px; }
+  .lab-disclosure > summary, .policy-disclosure > summary { padding: 18px; }
+  .lab-disclosure-content, .policy-disclosure-content { padding: 16px; }
+  .map-panel { min-height: 540px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
