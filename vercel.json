@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "fastapi",
-  "installCommand": "pip install -r requirements.txt && cd frontend && pnpm install --frozen-lockfile",
+  "installCommand": "pip install -r requirements.txt && cd frontend && npx --yes pnpm@11.25.0 install --frozen-lockfile",
   "buildCommand": "cd frontend && pnpm build",
   "functions": {
     "app.py": {
