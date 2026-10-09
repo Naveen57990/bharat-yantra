@@ -2,6 +2,14 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "fastapi",
   "buildCommand": "cd frontend && npx --yes pnpm@11.25.0 install --frozen-lockfile && npx --yes pnpm@11.25.0 build",
+  "headers": [
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store, max-age=0, must-revalidate" }
+      ]
+    }
+  ],
   "functions": {
     "app.py": {
       "maxDuration": 60,
