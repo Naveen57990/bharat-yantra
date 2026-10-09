@@ -10,10 +10,10 @@ from fastapi import HTTPException
 from pydantic import BaseModel, Field
 
 from .flood import WARD_PATH, SCREEN_GRID_PATH, RainfallScenarioRequest, IllustrativeFloodModelRequest, calculate_rainfall_scenario, illustrative_flood_model
+from .paths import RUNS_ROOT
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-RUNS_PATH = PROJECT_ROOT / "data" / "runs" / "flood"
+RUNS_PATH = RUNS_ROOT / "flood"
 
 
 class FloodRunRecord(BaseModel):

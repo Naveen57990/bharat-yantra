@@ -13,11 +13,11 @@ from pydantic import BaseModel, Field
 from shapely.geometry import shape
 
 from .flood import SCREEN_GRID_PATH
+from .paths import PROJECT_ROOT, RUNS_ROOT
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
 FLOOD_RECORDS_PATH = PROJECT_ROOT / "data" / "raw" / "mcgm" / "disaster" / "flooding_spots_fs.geojson"
 SHELTERS_PATH = PROJECT_ROOT / "data" / "raw" / "mcgm" / "disaster" / "temporary_shelters_fs.geojson"
-RUNS_PATH = PROJECT_ROOT / "data" / "runs" / "preparedness"
+RUNS_PATH = RUNS_ROOT / "preparedness"
 
 
 class PreparednessPlanRequest(BaseModel):

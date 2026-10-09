@@ -11,9 +11,9 @@ from pydantic import BaseModel, Field
 
 from .accessibility import read_access_run
 from .preparedness import read_preparedness_plan
+from .paths import PROJECT_ROOT, RUNS_ROOT
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-RUNS_PATH = PROJECT_ROOT / "data" / "runs" / "decisions"
+RUNS_PATH = RUNS_ROOT / "decisions"
 
 
 class DecisionSaveRequest(BaseModel):

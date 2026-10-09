@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "fastapi",
+  "installCommand": "pip install -r requirements.txt && cd frontend && pnpm install --frozen-lockfile",
+  "buildCommand": "cd frontend && pnpm build",
+  "functions": {
+    "app.py": {
+      "maxDuration": 60,
+      "includeFiles": "{backend/**,data/provenance/**,data/raw/imd/**,data/raw/mcgm/**,data/raw/osm/mumbai_fs_osm.gpkg,data/raw/osm/emergency_facilities.geojson,data/raw/osm/osm_manifest.json,data/processed/fs_ward/copernicus_glo30_dsm_utm43n.tif*,data/processed/fs_ward/relative_flood_screen.*,data/reports/mcgm_drainage_quality_summary.json,docs/agent_knowledge.md,frontend/dist/**}"
+    }
+  }
+}

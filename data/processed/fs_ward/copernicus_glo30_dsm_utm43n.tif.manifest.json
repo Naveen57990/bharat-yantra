@@ -1,0 +1,35 @@
+{
+  "schema": "india-sim-derived-raster/1.0",
+  "created_at_utc": "2026-10-07T05:03:11.173644+00:00",
+  "output": "copernicus_glo30_dsm_utm43n.tif",
+  "sha256": "90b67df112babcba8813006e15491f16d0977a749a59db20b6ab67c53eec5c89",
+  "source_tiles": [
+    {
+      "path": "data/raw/copernicus/copernicus_dem_N18_E072.tif",
+      "sha256": "5b5e3ac02d569235d1f74ae9f092faa01094449786aeffec2c2862c51e95f15b"
+    },
+    {
+      "path": "data/raw/copernicus/copernicus_dem_N19_E072.tif",
+      "sha256": "b90f91a2b8cd69da327d8c133417d119a44f9880c8bb080114be5d8e9cf3dcdd"
+    }
+  ],
+  "source": "Copernicus DEM GLO-30 Public, 2021 release; DSM (not DTM)",
+  "source_attribution": "\u00a9 DLR e.V. 2010-2014 and \u00a9 Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved",
+  "source_terms": "https://copernicus-dem-30m.s3.amazonaws.com/readme.html",
+  "spatial_resolution_metres_nominal": 30,
+  "crs": "EPSG:32643",
+  "buffer_metres": 1000,
+  "valid_pixel_count": 30029,
+  "nodata_pixel_count": 11551,
+  "valid_elevation_range_metres": [
+    -8.929458618164062,
+    38.47352981567383
+  ],
+  "intended_use": "3D visualization and regional terrain context only",
+  "limitations": [
+    "DSM includes surface objects such as buildings and vegetation.",
+    "Nominal 30 m spacing cannot resolve urban drains or street-scale water flow.",
+    "No vertical-datum harmonization, hydrologic conditioning, or flood validation is performed.",
+    "This product is not a flood depth map or a flood model input approved for prediction."
+  ]
+}

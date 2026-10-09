@@ -13,14 +13,14 @@ import networkx as nx
 from fastapi import HTTPException
 from pydantic import BaseModel, Field
 from shapely.geometry import Point, mapping
+from .paths import PROJECT_ROOT, RUNS_ROOT
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
 GRAPH_PATH = PROJECT_ROOT / "data" / "raw" / "osm" / "mumbai_fs_osm.gpkg"
 FACILITIES_PATH = PROJECT_ROOT / "data" / "raw" / "osm" / "emergency_facilities.geojson"
 WARD_PATH = PROJECT_ROOT / "data" / "raw" / "mcgm" / "fs_ward_boundary.geojson"
 OSM_MANIFEST_PATH = PROJECT_ROOT / "data" / "raw" / "osm" / "osm_manifest.json"
-RUNS_PATH = PROJECT_ROOT / "data" / "runs" / "accessibility"
+RUNS_PATH = RUNS_ROOT / "accessibility"
 ANALYSIS_CRS = "EPSG:32643"
 
 

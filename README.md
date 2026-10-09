@@ -105,7 +105,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-The Vercel frontend bundle includes a static F/S Ward map snapshot so the ward boundary and mapped layers display without local file routes. This does not make the API features live: flood calculations, routing, saved plans, and the assistant need a separately hosted FastAPI service configured with `VITE_API_BASE_URL`. The bundled map files are public to site visitors; review the provenance registry and source terms before public release. API setup details are in the [backend guide](backend/README.md) and [frontend deployment notes](frontend/README.md).
+The Vercel production app serves the static F/S Ward map snapshot and FastAPI from one origin. In the Vercel project settings, set the Root Directory to the repository root (clear `frontend`), then let `vercel.json` install the Python and frontend dependencies and build the Vite app. The app includes the ward data required for its flood screening and road-network endpoints. Run records use Vercel's temporary `/tmp` storage for the demo session; they are not durable across cold starts. Ollama is local-only, so the map assistant's generative responses need a hosted model provider to be configured separately. The bundled map files are public to site visitors; review the provenance registry and source terms before public release. See the [backend guide](backend/README.md) and [frontend deployment notes](frontend/README.md).
 
 ## Repository layout
 

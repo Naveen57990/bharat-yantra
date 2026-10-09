@@ -1,0 +1,42 @@
+{
+  "dataset_id": "osm_fs_context",
+  "source": "OpenStreetMap contributors via OSMnx/Overpass",
+  "source_url": "https://www.openstreetmap.org/copyright",
+  "license": "Open Database License 1.0 (ODbL)",
+  "attribution": "\u00a9 OpenStreetMap contributors (https://www.openstreetmap.org/copyright)",
+  "retrieved_at_utc": "2026-10-07T05:01:45.091376+00:00",
+  "input_boundary": "data/raw/mcgm/fs_ward_boundary.geojson",
+  "ward_name": "F/S",
+  "query_buffer_metres": 1000.0,
+  "query_bounds_wgs84": [
+    72.82339591454792,
+    18.969348477742418,
+    72.87918329153453,
+    19.025954179515345
+  ],
+  "network_type": "drive",
+  "counts": {
+    "drive_nodes": 2314,
+    "drive_edges": 4957,
+    "buildings": 4886,
+    "emergency_facilities": 98
+  },
+  "outputs": [
+    "mumbai_fs_osm.gpkg",
+    "roads.geojson",
+    "buildings.geojson",
+    "emergency_facilities.geojson"
+  ],
+  "limitations": [
+    "OpenStreetMap is community-contributed and may be incomplete or outdated.",
+    "The drive graph follows available access and one-way tags; it is not a traffic or emergency-response-time model.",
+    "Facility tags are mapped features, not a verified operational inventory.",
+    "Derived database output retains ODbL obligations; attribution and share-alike review is required before publication."
+  ],
+  "output_sha256": {
+    "mumbai_fs_osm.gpkg": "b2319618f6e7819681bd6a3c51f0a250f5de94e3868f1a2d6b78550da362360f",
+    "roads.geojson": "379b2bf4c9405382f135fba1ecca238a43ca9726202df00ae06d9dc86f411814",
+    "buildings.geojson": "775f19442e090ac7b47736fb76c02b5c2777ed4a99b71ec1355c6567a32e34e3",
+    "emergency_facilities.geojson": "a2ebab6ff44f3fd5ed1ff8144d28dad34cdca9cd4eb1dffc0c33dc4ec008db16"
+  }
+}

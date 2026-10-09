@@ -1,0 +1,38 @@
+{
+  "drains": {
+    "count": 2044,
+    "status": {
+      "Existing": 1048,
+      "Proposal": 996
+    },
+    "nulls": {},
+    "unique_upstream_ids": 1982,
+    "unique_downstream_ids": 1837,
+    "width_mm_range": [
+      230.0,
+      8001.0
+    ],
+    "height_mm_range": [
+      230.0,
+      3227.0
+    ],
+    "invert_range_mTHD": [
+      19.5,
+      46.19
+    ]
+  },
+  "manholes": {
+    "count": 1971,
+    "nulls": {},
+    "node_id_unique": 1971,
+    "ground_level_range": [
+      25.8,
+      48.827000000000005
+    ]
+  },
+  "connectivity_diagnostic": {
+    "manhole_node_ids": 1971,
+    "drain_records_with_both_endpoints_matching_manhole": 1994,
+    "warning": "only an identifier match check; not proof of geometric/topological connectivity or valid elevations"
+  }
+}

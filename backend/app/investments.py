@@ -16,9 +16,9 @@ from shapely.ops import linemerge, unary_union
 
 from .accessibility import ANALYSIS_CRS, _distance_map, _load_network
 from .flood import SCREEN_GRID_PATH
+from .paths import PROJECT_ROOT, RUNS_ROOT
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-RUNS_PATH = PROJECT_ROOT / "data" / "runs" / "investments"
+RUNS_PATH = RUNS_ROOT / "investments"
 
 
 class InvestmentPlanRequest(BaseModel):

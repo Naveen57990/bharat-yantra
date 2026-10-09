@@ -1,0 +1,49 @@
+{
+  "provider": "Municipal Corporation of Greater Mumbai (MCGM) / Esri India service credits",
+  "service_url": "https://prsrvgisapp.mcgm.gov.in/server/rest/services/mcgm/MCGMGIS_Departments_Master_All_Layers/MapServer",
+  "retrieved_at_utc": "2026-10-07T17:17:20Z",
+  "ward_filter": "WARD = 'F/S'",
+  "output_crs": "EPSG:4326",
+  "records": {
+    "flooding_spots": {
+      "layer_id": 344,
+      "layer_name": "Flooding Spots",
+      "file": "flooding_spots_fs.geojson",
+      "feature_count": 34,
+      "sha256": "e4dd09f9940c0d06830d524f98f9efa5ba4db69dde6b19b6fd7423a96e5bba88"
+    },
+    "temporary_shelters": {
+      "layer_id": 232,
+      "layer_name": "Temporary Shelters",
+      "file": "temporary_shelters_fs.geojson",
+      "feature_count": 45,
+      "sha256": "08eb06ca8c3c1a3af136bb5c761824556238a8253601773006887b4354927b95"
+    }
+  },
+  "terms": "Service metadata does not state a reuse license for these records. User will review source permissions before external publication. Local snapshot is retained for development.",
+  "scope_notes": [
+    "The flooding-spots records do not expose a verified flood-event date. Record creation and edit dates are not treated as event dates.",
+    "19 of the 34 F/S flood-record names contain a deletion marker; records are preserved and labeled, not silently removed.",
+    "The exposed temporary-shelter schema does not provide verified capacity or current operating status."
+  ],
+  "layer_metadata": {
+    "flooding_spots": {
+      "layer_id": 344,
+      "file": "flooding_spots_layer_metadata.json",
+      "retrieved_at_utc": "2026-10-07T17:35:00Z",
+      "sha256": "29b8e7e27c5dfa04ce3b2d9f06ac26b3cadd996f0757bc9b66b02a9e45dd0f20"
+    },
+    "temporary_shelters": {
+      "layer_id": 232,
+      "file": "temporary_shelters_layer_metadata.json",
+      "retrieved_at_utc": "2026-10-07T17:35:00Z",
+      "sha256": "627674b12e5c51a2dbcc493d1ef9a7b0eeadb491db7d528578c62f74eacf1615"
+    }
+  },
+  "schema_notes": [
+    "Flooding Spots metadata aliases DEPTH only as Depth and provides no measurement unit; HEIGHT_TO_MSL is empty in all 34 F/S records.",
+    "Flooding Spots has coded SUBTYPE values for localized flooding, remedial measures done/in progress/not possible, and others. Record creation/edit timestamps are not event dates.",
+    "Flooding Spots AFFECT_POPULATION is populated in 13 of 34 records; values are source estimates/attributes with no reference date or deduplication method, so do not sum as a ward population impact.",
+    "Temporary Shelters metadata includes staff/equipment and working-hours fields, but no shelter capacity or current-operation status field. All F/S working-hour fields are null in the retrieved snapshot."
+  ]
+}
