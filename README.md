@@ -22,7 +22,13 @@ Public decisions often involve competing needs, limited budgets, and incomplete 
 
 The first testbed is Mumbai’s F/S Ward, selected for local development because several relevant map layers are already available. Its boundary and source rights remain under review; this is not a claim of municipal endorsement or operational readiness.
 
-## The demo
+## Explore the features
+
+<p align="center">
+  <img src="docs/assets/feature-showcase.svg" alt="Illustrated overview of rainfall screening, budget planning, emergency access what-if, and evidence-linked decision review" width="100%">
+</p>
+
+<p align="center"><sub>Feature artwork is illustrative. It contains no live data, geographic boundary, or predicted impact.</sub></p>
 
 | Planning area | What a user can explore | What the result means |
 | --- | --- | --- |
@@ -34,6 +40,15 @@ The first testbed is Mumbai’s F/S Ward, selected for local development because
 | **Health-facility access** | Explore mapped health features and route options | Community-mapped locations; operating status and capacity are not confirmed. |
 | **Action tracker** | Turn a selected plan into map-linked review tasks and update local status | A working checklist, not an official work-order or assignment system. |
 | **Map assistant** | Ask about available map evidence or request a named road-closure scenario | Answers are grounded in project guidance and retrieved evidence; missing facts must remain unknown. |
+
+### A short demo walkthrough
+
+1. **Start with a rainfall scenario.** Set an amount and duration. The shortlist and map highlight places ranked for field inspection from relative terrain and mapped-drain evidence.
+2. **Compare a public-works budget.** Enter a planning envelope, review drainage, streetlight, and health-access options, then select an option to see its candidate locations on the map.
+3. **Test access under disruption.** Select one or more mapped roads as hypothetical closures and compare the share of mapped road points with a route to a mapped health location. The map highlights the selected closures and road points that lose a route in that scenario.
+4. **Save and explain the trade-off.** Save the decision comparison, review which points are supported by the calculation and which are still unknown, then ask the assistant for a short explanation grounded in that saved result.
+
+The screens keep assumptions and limitations visible. They do not claim that a proposed work will reduce flooding, protect a number of people, or ensure a safe route.
 
 ### Rainfall shortlist rule
 

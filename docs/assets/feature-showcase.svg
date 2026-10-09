@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="690" viewBox="0 0 1440 690" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Bharat Yantra feature showcase</title>
+  <desc id="desc">Four concept panels illustrate rainfall field screening, budget comparison, road closure access testing, and evidence-linked decision review. No panel shows live data or a prediction.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="690" gradientUnits="userSpaceOnUse"><stop stop-color="#10191D"/><stop offset="1" stop-color="#182C35"/></linearGradient>
+    <linearGradient id="map" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#29474A"/><stop offset="1" stop-color="#1C3039"/></linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" stroke="#D5E0DC" stroke-opacity=".08"/></pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="13" flood-color="#071014" flood-opacity=".45"/></filter>
+  </defs>
+  <rect width="1440" height="690" rx="28" fill="url(#bg)"/>
+  <circle cx="1310" cy="70" r="260" fill="#45B8A1" fill-opacity=".08"/>
+  <circle cx="70" cy="620" r="230" fill="#EA9B58" fill-opacity=".055"/>
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="64" y="69" fill="#F5F2E8" font-size="28" font-weight="700" letter-spacing="-.5">Four ways to explore a ward decision</text>
+    <text x="65" y="101" fill="#B6C5C5" font-size="15">Change a scenario, inspect what appears on the map, and keep the evidence and unknowns visible.</text>
+
+    <!-- Rainfall screening -->
+    <g filter="url(#shadow)">
+      <rect x="56" y="136" width="646" height="222" rx="20" fill="#17262A" stroke="#EF9B76" stroke-opacity=".48"/>
+      <rect x="76" y="154" width="38" height="38" rx="12" fill="#EF9B76" fill-opacity=".17"/>
+      <path d="M95 161v10m-8-5 8-7 8 7m-8 5v13" stroke="#F2A282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="126" y="169" fill="#F2A282" font-size="11" font-weight="700" letter-spacing="1.6">01 · FLOOD READINESS</text>
+      <text x="126" y="188" fill="#F4F0E7" font-size="20" font-weight="650">Rainfall → field checks</text>
+      <text x="78" y="222" fill="#B4C2C1" font-size="13">Adjust rain amount and duration to update a relative inspection shortlist.</text>
+      <text x="78" y="252" fill="#E5E8DE" font-size="12" font-weight="600">LOWER GROUND</text>
+      <rect x="78" y="264" width="278" height="10" rx="5" fill="#304247"/><rect x="78" y="264" width="193" height="10" rx="5" fill="#E89072"/>
+      <text x="78" y="301" fill="#E5E8DE" font-size="12" font-weight="600">FEWER MAPPED DRAINS</text>
+      <rect x="78" y="313" width="278" height="10" rx="5" fill="#304247"/><rect x="78" y="313" width="230" height="10" rx="5" fill="#E5B36E"/>
+      <rect x="398" y="218" width="279" height="120" rx="14" fill="url(#map)"/>
+      <rect x="398" y="218" width="279" height="120" rx="14" fill="url(#grid)"/>
+      <path d="m407 321 55-49 43 13 45-39 51 23 66-36" stroke="#B7D5C6" stroke-opacity=".7" stroke-width="2"/>
+      <path d="m418 233 40 31 53-13 42 31 57-12 46 34" stroke="#B7D5C6" stroke-opacity=".4" stroke-width="2"/>
+      <circle cx="500" cy="285" r="7" fill="#F09073" stroke="#FFE1D3" stroke-width="2"/><circle cx="582" cy="267" r="6" fill="#F0C776" stroke="#FFF0C8" stroke-width="2"/><circle cx="616" cy="309" r="6" fill="#59C7B0" stroke="#C7F0E7" stroke-width="2"/>
+      <text x="416" y="328" fill="#D4DFDB" font-size="9" letter-spacing=".6">REVIEW LOCATIONS · RELATIVE SCREEN</text>
+    </g>
+
+    <!-- Budget planner -->
+    <g filter="url(#shadow)">
+      <rect x="738" y="136" width="646" height="222" rx="20" fill="#17262A" stroke="#E8BF62" stroke-opacity=".5"/>
+      <rect x="758" y="154" width="38" height="38" rx="12" fill="#E8BF62" fill-opacity=".17"/>
+      <path d="M768 164h18v19h-18zM772 169h10m-10 5h10m-10 5h6" stroke="#EDC969" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="808" y="169" fill="#EDC969" font-size="11" font-weight="700" letter-spacing="1.6">02 · BUDGET PLANNER</text>
+      <text x="808" y="188" fill="#F4F0E7" font-size="20" font-weight="650">Compare candidate works</text>
+      <text x="760" y="222" fill="#B4C2C1" font-size="13">Use one planning envelope to compare costs, quantities, and locations.</text>
+      <rect x="760" y="244" width="181" height="84" rx="12" fill="#263638" stroke="#F0C96C" stroke-opacity=".75"/>
+      <rect x="951" y="244" width="181" height="84" rx="12" fill="#263638" stroke="#FFFFFF" stroke-opacity=".09"/>
+      <rect x="1142" y="244" width="220" height="84" rx="12" fill="#263638" stroke="#FFFFFF" stroke-opacity=".09"/>
+      <circle cx="780" cy="266" r="5" fill="#4EC5AD"/><text x="793" y="270" fill="#F1F0E7" font-size="12" font-weight="600">DRAINAGE</text>
+      <text x="780" y="293" fill="#AFC0BC" font-size="11">Review mapped assets</text><text x="780" y="313" fill="#EDC969" font-size="10">CANDIDATE LOCATIONS</text>
+      <circle cx="971" cy="266" r="5" fill="#F0A077"/><text x="984" y="270" fill="#F1F0E7" font-size="12" font-weight="600">STREET LIGHTS</text>
+      <text x="971" y="293" fill="#AFC0BC" font-size="11">Edit unit allowance</text><text x="971" y="313" fill="#EDC969" font-size="10">DEMO SPACING</text>
+      <circle cx="1162" cy="266" r="5" fill="#84A9F0"/><text x="1175" y="270" fill="#F1F0E7" font-size="12" font-weight="600">HEALTH ACCESS</text>
+      <text x="1162" y="293" fill="#AFC0BC" font-size="11">Review mapped access</text><text x="1162" y="313" fill="#EDC969" font-size="10">NOT A BENEFIT FORECAST</text>
+    </g>
+
+    <!-- Road closure and health access -->
+    <g filter="url(#shadow)">
+      <rect x="56" y="382" width="646" height="222" rx="20" fill="#17262A" stroke="#83A8F2" stroke-opacity=".52"/>
+      <rect x="76" y="400" width="38" height="38" rx="12" fill="#83A8F2" fill-opacity=".16"/>
+      <path d="M85 419h18m-9-9v18" stroke="#9AB8F6" stroke-width="2" stroke-linecap="round"/>
+      <text x="126" y="415" fill="#9AB8F6" font-size="11" font-weight="700" letter-spacing="1.6">03 · EMERGENCY ACCESS</text>
+      <text x="126" y="434" fill="#F4F0E7" font-size="20" font-weight="650">Try road-closure scenarios</text>
+      <text x="78" y="468" fill="#B4C2C1" font-size="13">Select mapped roads and compare network reach to health locations.</text>
+      <text x="78" y="502" fill="#E5E8DF" font-size="12" font-weight="600">BEFORE</text>
+      <text x="78" y="542" fill="#E5E8DF" font-size="12" font-weight="600">WHAT-IF</text>
+      <path d="M144 498h220" stroke="#56C5AE" stroke-width="4" stroke-linecap="round"/>
+      <path d="M144 538h79m44 0h97" stroke="#F08479" stroke-width="4" stroke-linecap="round"/>
+      <path d="m236 530 20 16m0-16-20 16" stroke="#F08479" stroke-width="3" stroke-linecap="round"/>
+      <rect x="398" y="464" width="279" height="120" rx="14" fill="url(#map)"/>
+      <rect x="398" y="464" width="279" height="120" rx="14" fill="url(#grid)"/>
+      <path d="m410 561 51-51 51 11 38-29 46 23 70-40" stroke="#B7D5C6" stroke-opacity=".65" stroke-width="2"/>
+      <path d="M462 510 508 521 550 492 596 515" stroke="#F08479" stroke-width="4" stroke-linecap="round" stroke-dasharray="7 7"/>
+      <path d="m522 495 19 27m-19 0 19-27" stroke="#F08479" stroke-width="3"/>
+      <circle cx="458" cy="511" r="6" fill="#83A8F2" stroke="#DDE7FF" stroke-width="2"/><circle cx="625" cy="533" r="6" fill="#56C5AE" stroke="#C9F5E9" stroke-width="2"/>
+      <text x="416" y="574" fill="#D4DFDB" font-size="9" letter-spacing=".6">HYPOTHETICAL CLOSURE · NOT LIVE STATUS</text>
+    </g>
+
+    <!-- Decision review -->
+    <g filter="url(#shadow)">
+      <rect x="738" y="382" width="646" height="222" rx="20" fill="#17262A" stroke="#B89CEB" stroke-opacity=".55"/>
+      <rect x="758" y="400" width="38" height="38" rx="12" fill="#B89CEB" fill-opacity=".16"/>
+      <path d="M768 411h18m-18 7h18m-18 7h11" stroke="#C6AEF0" stroke-width="2" stroke-linecap="round"/>
+      <text x="808" y="415" fill="#C6AEF0" font-size="11" font-weight="700" letter-spacing="1.6">04 · DECISION REVIEW</text>
+      <text x="808" y="434" fill="#F4F0E7" font-size="20" font-weight="650">Save the trade-offs</text>
+      <text x="760" y="468" fill="#B4C2C1" font-size="13">Compare what the outputs support with what still needs checking.</text>
+      <rect x="760" y="490" width="276" height="92" rx="14" fill="#263638"/>
+      <rect x="1048" y="490" width="314" height="92" rx="14" fill="#263638"/>
+      <circle cx="780" cy="511" r="6" fill="#56C5AE"/><text x="796" y="515" fill="#8ED7C4" font-size="12" font-weight="650">SUPPORTED BY OUTPUTS</text>
+      <path d="M780 534h225m-225 14h186m-186 14h203" stroke="#AFC0BC" stroke-opacity=".47" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="1068" cy="511" r="6" fill="#F0C96C"/><text x="1084" y="515" fill="#F0C96C" font-size="12" font-weight="650">UNKNOWN / NEEDS REVIEW</text>
+      <path d="M1068 534h260m-260 14h225m-225 14h241" stroke="#AFC0BC" stroke-opacity=".47" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <rect x="56" y="628" width="1328" height="34" rx="17" fill="#EAE4D5" fill-opacity=".07" stroke="#D8E0D6" stroke-opacity=".12"/>
+    <text x="720" y="650" text-anchor="middle" fill="#D0D8D0" font-size="11" letter-spacing=".6">CONCEPT ARTWORK · ILLUSTRATIVE INTERFACE · NO LIVE DATA OR PREDICTED IMPACTS SHOWN</text>
+  </g>
+</svg>
