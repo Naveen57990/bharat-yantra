@@ -1,0 +1,26 @@
+{
+  "name": "bharat-yantra-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/copy-cesium-assets.mjs",
+    "dev": "vite",
+    "prebuild": "node scripts/copy-cesium-assets.mjs",
+    "build": "tsc --noEmit && vite build",
+    "build:local-demo": "node scripts/copy-cesium-assets.mjs && tsc --noEmit && vite build --mode local-demo",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cesium": "1.132.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "@vitejs/plugin-react": "4.7.0",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  }
+}

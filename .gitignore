@@ -1,0 +1,26 @@
+# Source datasets stay local until the provenance and publication review clears them.
+data/raw/
+data/processed/
+data/reports/
+
+# Local environments and generated inspection/report output.
+.venv/
+__pycache__/
+*.py[cod]
+frontend/node_modules/
+frontend/dist/
+frontend/public/cesiumStatic/
+
+# Local secrets and environment-specific settings. Keep safe examples trackable.
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Local run outputs are derived from source data whose publication terms are unresolved.
+data/runs/
+
+# Local handoff notes may contain machine-specific paths and account context.
+HANDOFF_CONTEXT.md

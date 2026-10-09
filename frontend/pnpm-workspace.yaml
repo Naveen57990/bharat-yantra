@@ -1,0 +1,7 @@
+packages: []
+allowBuilds:
+  esbuild: true
+  protobufjs: true
+overrides:
+  "@cesium/engine@19.0.0>@zip.js/zip.js": 2.7.70
+  "@cesium/engine@21.0.1>@zip.js/zip.js": 2.8.1
