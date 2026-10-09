@@ -15,6 +15,7 @@ frontend/public/cesiumStatic/
 .env
 .env.*
 !.env.example
+!.env.production
 frontend/.env
 frontend/.env.*
 !frontend/.env.example

@@ -120,6 +120,7 @@ type MunicipalFloodContext = { snapshot: { retrieved_at_utc: string; records: { 
 
 function readableServiceMessage(error: unknown, fallback: string) {
   if (error instanceof Error && /failed to fetch|networkerror|load failed/i.test(error.message)) return fallback;
+  if (error instanceof SyntaxError || error instanceof Error && /unexpected token|not valid json|json parse/i.test(error.message)) return "The planning service is not connected to this deployment yet. Map layers can still be viewed.";
   return error instanceof Error ? error.message : fallback;
 }
 
