@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Bharat Yantra — ward decision laboratory</title>
+  <desc id="desc">A conceptual visual of a ward-scale digital map with connected infrastructure, scenario markers, and planning layers. This is not a real geographic map or model result.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1440" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#101B19"/>
+      <stop offset="1" stop-color="#1A302E"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#203431" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#132320" stop-opacity=".78"/>
+    </linearGradient>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" stroke="#B5C7B7" stroke-opacity=".08"/>
+    </pattern>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="mapclip"><rect x="742" y="60" width="638" height="438" rx="24"/></clipPath>
+  </defs>
+
+  <rect width="1440" height="560" rx="28" fill="url(#bg)"/>
+  <circle cx="1190" cy="135" r="250" fill="#D2AE61" fill-opacity=".055"/>
+  <circle cx="1370" cy="480" r="300" fill="#77A68E" fill-opacity=".07"/>
+  <path d="M0 430C250 350 400 590 700 490S1180 370 1440 450" stroke="#C6AA6A" stroke-opacity=".12" stroke-width="1.5"/>
+  <path d="M0 462C250 382 400 622 700 522S1180 402 1440 482" stroke="#C6AA6A" stroke-opacity=".08" stroke-width="1.5"/>
+
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <rect x="64" y="64" width="46" height="46" rx="12" fill="#D4B76D"/>
+    <path d="M77 78h20v3H77zm0 7h20v3H77zm0 7h13v3H77z" fill="#17231F"/>
+    <text x="126" y="84" fill="#E9ECE4" font-size="15" font-weight="700" letter-spacing="3">BHARAT YANTRA</text>
+    <text x="126" y="105" fill="#9FAFA5" font-size="13" letter-spacing=".6">WARD DECISION LABORATORY</text>
+
+    <rect x="64" y="158" width="248" height="32" rx="16" fill="#D5B86C" fill-opacity=".12" stroke="#D5B86C" stroke-opacity=".35"/>
+    <circle cx="82" cy="174" r="4" fill="#D5B86C"/>
+    <text x="96" y="179" fill="#DCC782" font-size="12" font-weight="600" letter-spacing="1.5">MUMBAI · WARD-SCALE</text>
+
+    <text x="64" y="258" fill="#F2F0E8" font-size="48" font-weight="650" letter-spacing="-1.4">See the place.</text>
+    <text x="64" y="314" fill="#F2F0E8" font-size="48" font-weight="650" letter-spacing="-1.4">Test the decision.</text>
+    <text x="67" y="360" fill="#AEBBB1" font-size="18">Explore public-service scenarios through a</text>
+    <text x="67" y="387" fill="#AEBBB1" font-size="18">map-linked, evidence-aware planning workspace.</text>
+
+    <g transform="translate(66 430)">
+      <rect width="174" height="42" rx="12" fill="url(#panel)" stroke="#9DB2A3" stroke-opacity=".2"/>
+      <circle cx="19" cy="21" r="5" fill="#D5B86C"/>
+      <text x="34" y="25" fill="#D7DED5" font-size="12" font-weight="600">COMPARE OPTIONS</text>
+      <rect x="188" width="154" height="42" rx="12" fill="url(#panel)" stroke="#9DB2A3" stroke-opacity=".2"/>
+      <path d="M207 25v-8m5 8v-13m5 13v-5" stroke="#87B99C" stroke-width="2" stroke-linecap="round"/>
+      <text x="229" y="25" fill="#D7DED5" font-size="12" font-weight="600">MAP THE IMPACT</text>
+      <rect x="356" width="176" height="42" rx="12" fill="url(#panel)" stroke="#9DB2A3" stroke-opacity=".2"/>
+      <path d="M375 15h13m-13 6h13m-13 6h8" stroke="#D9987E" stroke-width="2" stroke-linecap="round"/>
+      <text x="398" y="25" fill="#D7DED5" font-size="12" font-weight="600">KEEP EVIDENCE VISIBLE</text>
+    </g>
+
+    <rect x="742" y="60" width="638" height="438" rx="24" fill="#172A2D" stroke="#B5C7B7" stroke-opacity=".2"/>
+    <g clip-path="url(#mapclip)">
+      <rect x="742" y="60" width="638" height="438" fill="url(#grid)"/>
+      <path d="M760 340C840 280 866 305 925 230S1032 178 1100 211 1200 300 1270 244 1340 190 1400 225" stroke="#75A58D" stroke-opacity=".22" stroke-width="1.4"/>
+      <path d="M755 365C837 305 874 328 943 253S1041 200 1109 235 1205 321 1287 267 1350 216 1405 249" stroke="#75A58D" stroke-opacity=".18" stroke-width="1.4"/>
+      <path d="M753 392C827 334 880 355 960 278S1056 227 1123 262 1210 348 1302 290 1365 244 1414 276" stroke="#75A58D" stroke-opacity=".14" stroke-width="1.4"/>
+      <path d="M774 450 915 327 1018 359 1119 180 1222 217 1360 106" stroke="#D3BD83" stroke-opacity=".55" stroke-width="2" stroke-dasharray="5 8"/>
+      <path d="M804 137 921 215 1004 193 1080 303 1177 282 1260 389 1360 353" stroke="#D4E0D9" stroke-opacity=".36" stroke-width="2"/>
+      <path d="M840 470 879 363 974 309 1070 339 1150 420 1265 405 1348 315" stroke="#D4E0D9" stroke-opacity=".27" stroke-width="2"/>
+      <path d="M994 91 1030 161 1115 177 1166 236 1245 250 1296 322" stroke="#D4E0D9" stroke-opacity=".22" stroke-width="2"/>
+      <path d="M895 116 934 173 922 215 971 269 960 278 1004 322" stroke="#D4E0D9" stroke-opacity=".2" stroke-width="2"/>
+      <path d="M1160 92 1138 154 1177 201 1150 282 1194 336 1177 406" stroke="#D4E0D9" stroke-opacity=".2" stroke-width="2"/>
+      <path d="M1269 118 1238 173 1260 217 1222 282 1265 327 1249 384" stroke="#D4E0D9" stroke-opacity=".2" stroke-width="2"/>
+      <path d="M1048 386c-22-18-14-50 12-59 27-10 52 10 47 37-4 25-37 39-59 22Z" fill="#D9987E" fill-opacity=".22" filter="url(#glow)"/>
+      <circle cx="1078" cy="347" r="8" fill="#E8A58B" stroke="#F4D6C8" stroke-width="2"/>
+      <circle cx="1078" cy="347" r="18" stroke="#E8A58B" stroke-opacity=".45"/>
+      <circle cx="1223" cy="217" r="6" fill="#D8C076" stroke="#F1E3B0" stroke-width="2"/>
+      <circle cx="1265" cy="327" r="6" fill="#83B89B" stroke="#C7E1CF" stroke-width="2"/>
+      <circle cx="971" cy="269" r="5" fill="#83B89B" stroke="#C7E1CF" stroke-width="2"/>
+
+      <rect x="772" y="86" width="196" height="58" rx="14" fill="#0D1918" fill-opacity=".9" stroke="#D4B76D" stroke-opacity=".25"/>
+      <text x="790" y="109" fill="#D7C17A" font-size="10" font-weight="600" letter-spacing="1.4">SCENARIO WORKSPACE</text>
+      <text x="790" y="129" fill="#E9ECE4" font-size="14" font-weight="600">Compare · Inspect · Plan</text>
+
+      <rect x="1196" y="398" width="153" height="70" rx="14" fill="#0D1918" fill-opacity=".9" stroke="#9DB2A3" stroke-opacity=".22"/>
+      <circle cx="1216" cy="420" r="4" fill="#E8A58B"/><text x="1228" y="424" fill="#BBC8BE" font-size="11">Review location</text>
+      <circle cx="1216" cy="441" r="4" fill="#D8C076"/><text x="1228" y="445" fill="#BBC8BE" font-size="11">Mapped route</text>
+      <circle cx="1216" cy="458" r="4" fill="#83B89B"/><text x="1228" y="462" fill="#BBC8BE" font-size="11">Public facility</text>
+    </g>
+    <text x="742" y="530" fill="#9AA99F" font-size="11" letter-spacing=".45">CONCEPT ILLUSTRATION · NOT A GEOGRAPHIC BOUNDARY OR MODEL OUTPUT</text>
+  </g>
+</svg>
