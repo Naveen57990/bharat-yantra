@@ -25,3 +25,4 @@ data/runs/
 
 # Local handoff notes may contain machine-specific paths and account context.
 HANDOFF_CONTEXT.md
+.vercel
