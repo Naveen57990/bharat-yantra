@@ -27,3 +27,8 @@ data/runs/
 HANDOFF_CONTEXT.md
 .vercel
 .presentation-build/
+
+# Submission materials kept locally; do not publish these drafts to GitHub.
+/docs/SUBMISSION_CHECKLIST.md
+/docs/DEMO_VIDEO_SCRIPT.md
+/docs/submission/BharatYantra_HSC2027_Pitch_Draft.pptx
