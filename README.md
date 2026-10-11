@@ -18,6 +18,10 @@ An evidence-aware, map-linked decision laboratory for Mumbai ward planning.</p>
 
 <p align="center"><strong><a href="https://bharat-yantra.vercel.app/">Open the live prototype</a></strong> · <a href="https://github.com/Naveen57990/bharat-yantra">Browse the source on GitHub</a></p>
 
+**For judges:** [Judge guide](docs/JUDGE_GUIDE.md) · [Submission checklist](docs/SUBMISSION_CHECKLIST.md) · [7-slide pitch draft](docs/submission/BharatYantra_HSC2027_Pitch_Draft.pptx) · [Demo-video script](docs/DEMO_VIDEO_SCRIPT.md)
+
+The linked presentation is a content draft, not the official IIT Bombay template version. Add the registered team details and the team's AI-use estimate before uploading it.
+
 > **Prototype notice** — Bharat Yantra is an exploratory demonstration, not an operational government system. Rainfall screening is not a flood forecast. Shelter status, capacity, safety, and evacuation routes are unverified. Use official sources and responsible departments for real-world decisions.
 
 ## The idea

@@ -20,8 +20,11 @@ Checked against the official [MY Bharat Hack for Social Cause page](https://mybh
 - [x] MIT license for original project code/documentation.
 - [x] Provenance registry, sample local data, and deterministic backend tests.
 - [x] Judge walkthrough and test guide: [`JUDGE_GUIDE.md`](JUDGE_GUIDE.md).
+- [x] Prepare a 7-slide pitch-content draft: [`BharatYantra_HSC2027_Pitch_Draft.pptx`](submission/BharatYantra_HSC2027_Pitch_Draft.pptx). It is not yet in the official IIT Bombay template; use the portal template before uploading.
+- [x] Prepare a 3–5 minute walkthrough script: [`DEMO_VIDEO_SCRIPT.md`](DEMO_VIDEO_SCRIPT.md).
+- [ ] Enter the actual team names and roles, and confirm the AI-use percentage in the pitch draft.
+- [ ] Transfer the pitch content to the official template and export under 10 MB.
 - [ ] Record, review, and upload the demo video.
-- [ ] Create the 6–7 slide deck in the official template and export under 10 MB.
 - [ ] Complete and upload Annexure 1 and each member's required ID documents.
 - [ ] Verify data publication rights before presenting the checked-in data bundle as cleared or encouraging redistribution. Current registry status is `hold` for all 19 records; the MIT code license does not cover third-party data. See the README's [data and responsible use section](../README.md#data-and-responsible-use).
 - [ ] Re-open the public demo and repository from a signed-out/private browser window immediately before submission.
@@ -36,4 +39,3 @@ Checked against the official [MY Bharat Hack for Social Cause page](https://mybh
 5. **Impact and scale:** describe the intended workflow value and a validation-led path to another ward; present no unmeasured savings or lives protected as achieved results.
 6. **Build and evidence:** architecture, test coverage, what is deterministic, data limitations, validation still required, deployment link.
 7. **Team and AI disclosure:** team roles/plan, AI-tool use and estimated contribution, next validation steps, demo and repository links.
-
