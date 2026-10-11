@@ -17,6 +17,17 @@ From the project root:
 
 The service binds to loopback by default. API documentation is available at `http://127.0.0.1:8000/docs`.
 
+## Deterministic workflow tests
+
+From the repository root, run:
+
+```sh
+./.venv/bin/python -m unittest discover -s backend/tests -v
+./.venv/bin/python -m compileall -q backend/app backend/tests
+```
+
+The suite uses the checked-in local extracts and temporary directories for run records. It makes no external calls. It verifies core calculations and route behavior, not source accuracy, facility operations, flood model validity, or emergency readiness. These local data derivatives remain subject to the held source terms in `data/provenance/dataset_registry.csv`.
+
 ## Current endpoints
 
 - `GET /api/v1/health` — service status and flood-output availability.

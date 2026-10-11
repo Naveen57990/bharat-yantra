@@ -580,7 +580,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .empty-meta { display: block; padding-top: 12px; color: #758581; font: 8px "DM Mono", monospace; letter-spacing: .08em; }
 .scene-coordinates { position: absolute; left: 19px; bottom: 15px; color: #85928e; font: 8px "DM Mono", monospace; letter-spacing: .09em; text-shadow: 0 1px 6px #0d171b; pointer-events: none; }
 .scene-coordinates span { padding: 0 5px; color: var(--accent); }
-.source-credits { position: absolute; right: 14px; bottom: 10px; max-width: 45%; color: #d8e0da; font: 8px "DM Mono", monospace; text-align: right; text-shadow: 0 1px 5px #081014; }
+.source-credits { position: absolute; right: 14px; bottom: 10px; max-width: min(56%, calc(100% - 28px)); max-height: 34%; overflow: auto; border-radius: 6px; padding: 4px 6px; background: rgba(8,16,20,.62); color: #d8e0da; font: 9px/1.45 "DM Mono", monospace; text-align: right; text-shadow: 0 1px 5px #081014; }
 .map-footer { display: flex; height: 43px; flex: 0 0 43px; align-items: center; justify-content: space-between; padding: 0 21px; border-top: 1px solid var(--line); color: #7f8e8b; font-size: 9px; }
 .map-footer-note { display: flex; align-items: center; gap: 8px; }
 .legend-ring { width: 8px; height: 8px; border: 1px solid var(--accent); border-radius: 50%; }

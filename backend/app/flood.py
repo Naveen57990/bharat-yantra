@@ -104,7 +104,9 @@ def flood_evidence() -> dict[str, Any]:
         "ward": {
             "name": "F/S Ward, Mumbai",
             "status": "provisional candidate; authority, vintage and reuse terms unresolved",
-            "area_km2": round(area / 1_000_000, 3),
+            # Keep enough precision for the frontend's rainfall-volume arithmetic
+            # to agree with the saved run, which uses the measured polygon area.
+            "area_km2": round(area / 1_000_000, 6),
             "area_method": "Area of the local boundary polygon projected to EPSG:32643; not an officially confirmed ward area.",
         },
         "flood_simulation_available": False,

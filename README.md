@@ -9,10 +9,14 @@ An evidence-aware, map-linked decision laboratory for Mumbai ward planning.</p>
 
 <p align="center">
   <a href="#the-demo">The demo</a> ·
+  <a href="docs/JUDGE_GUIDE.md">Judge guide</a> ·
+  <a href="docs/SUBMISSION_CHECKLIST.md">Submission checklist</a> ·
   <a href="#how-it-works">How it works</a> ·
   <a href="#run-locally">Run locally</a> ·
   <a href="#data-and-responsible-use">Data and responsible use</a>
 </p>
+
+<p align="center"><strong><a href="https://bharat-yantra.vercel.app/">Open the live prototype</a></strong> · <a href="https://github.com/Naveen57990/bharat-yantra">Browse the source on GitHub</a></p>
 
 > **Prototype notice** — Bharat Yantra is an exploratory demonstration, not an operational government system. Rainfall screening is not a flood forecast. Shelter status, capacity, safety, and evacuation routes are unverified. Use official sources and responsible departments for real-world decisions.
 
@@ -81,8 +85,8 @@ GIS preparation and source inspection use Python tools. Dataset origins, known q
 
 ### Requirements
 
-- Node.js and pnpm
-- Python 3.11 or newer
+- Node.js 22.13 or newer and pnpm 11.25.0 (the pinned package manager requires Node 22.13+)
+- Python 3.12 (the repository's configured and deployment-tested runtime)
 - Optional: Ollama and a locally installed model for the map assistant
 
 ### 1. Start the API
@@ -107,6 +111,18 @@ pnpm dev
 
 The Vercel production app serves the static F/S Ward map snapshot and FastAPI from one origin. In the Vercel project settings, set the Root Directory to the repository root (clear `frontend`), then let `vercel.json` install the Python and frontend dependencies and build the Vite app. The app includes the ward data required for its flood screening and road-network endpoints. Run records use Vercel's temporary `/tmp` storage for the demo session; they are not durable across cold starts. Ollama is local-only, so the map assistant's generative responses need a hosted model provider to be configured separately. The bundled map files are public to site visitors; review the provenance registry and source terms before public release. See the [backend guide](backend/README.md) and [frontend deployment notes](frontend/README.md).
 
+### Checks before sharing a change
+
+Run from the repository root:
+
+```sh
+./.venv/bin/python -m unittest discover -s backend/tests -v
+./.venv/bin/python -m compileall -q backend/app backend/tests
+cd frontend && pnpm install --frozen-lockfile && pnpm build
+```
+
+Then start the API and check `GET /api/v1/health`, `GET /api/v1/datasets`, `GET /api/v1/accessibility/closure-options`, and `GET /api/v1/flood/evidence`. In the browser, run a facility-access request, test one named hypothetical closure, save a rainfall scenario, and create a preparedness or investment comparison. Confirm that the selected results appear on the map, saved run IDs can be retrieved, and the interface labels results as exploratory rather than forecasts or official advice. See [`backend/tests/test_workflows.py`](backend/tests/test_workflows.py) for the deterministic local-data checks.
+
 ## Repository layout
 
 ```text
@@ -122,10 +138,14 @@ gis/                  GIS preparation and inspection utilities
 
 - F/S Ward is a **working development testbed**. Its boundary vintage and authority need verification.
 - MCGM, OSM, elevation, building, rainfall, and imagery sources have layer-specific rights, attribution, and quality requirements. Consult the provenance registry before use or redistribution.
+- The root [`LICENSE`](LICENSE) applies only to original project software and project-authored documentation. It does not relicense third-party data, maps, images, or other assets. Each dataset retains its own terms and required attribution.
+- **Public-release review is still open.** All 19 entries in the provenance registry are currently `hold` because reuse, redistribution, or source-specific obligations remain unresolved. Several held source and derived data files are still tracked in Git and served in the web bundle. This repository therefore is not yet fully cleared for unrestricted redistribution. Do not copy or redistribute held assets based only on this MIT code licence.
+- OSM data is under ODbL 1.0 and requires visible attribution plus applicable share-alike terms for distributed altered/derived databases. Copernicus GLO-30 permits use and distribution under its product licence with specific source, modification, liability and no-endorsement notices; see the linked license and required wording in [`data/raw/README.md`](data/raw/README.md). The exact layer-specific release conditions are recorded in the provenance registry; these conditions are separate from the code licence.
+- Open Buildings v3 is published by Google under CC BY 4.0 or ODbL 1.0. The subset obtained through Overture remains on hold until the rights and attribution for that accessed subset are documented.
 - Sources marked `hold` and products derived from them must not be published until the source-specific review is complete.
 - MCGM flood-location and temporary-shelter entries are source records. They do not confirm flood events, current shelter operation, safe access, or capacity.
 - Do not use this prototype as an emergency warning, evacuation instruction, official budget recommendation, or operational system.
-- No open-source license is included. Project and dataset reuse rights have not been cleared for general redistribution.
+- Project code is licensed under MIT; third-party data and service terms remain separate. Public release is conditional on resolving or excluding the held data assets and their derivatives.
 
 ## Project notes
 

@@ -1279,8 +1279,12 @@ function App() {
   const attribution = [
     import.meta.env.VITE_WARD_BOUNDARY_ATTRIBUTION,
     import.meta.env.VITE_TERRAIN_ATTRIBUTION,
-    ...(localSourcePreview ? ["MCGM / Esri India · local source preview", "© OpenStreetMap contributors · ODbL", "Google Research · Open Buildings v3 via Overture Maps · CC BY 4.0 / ODbL review pending", ...(enabledLayers.satellite ? ["Satellite: Esri, Vantor, Earthstar Geographics, and GIS User Community"] : [])] : []),
-    ...(localSourcePreview && enabledLayers.terrainContext ? ["Copernicus DEM GLO-30 · © DLR / Airbus under Copernicus by EU and ESA"] : []),
+    ...(localSourcePreview ? ["MCGM / Esri India · local source preview", "© OpenStreetMap contributors · ODbL 1.0 · openstreetmap.org/copyright", "Google Research · Open Buildings v3 via Overture Maps · source terms review pending", ...(enabledLayers.satellite ? ["Satellite: Esri, Vantor, Earthstar Geographics, and GIS User Community"] : [])] : []),
+    ...(localSourcePreview && enabledLayers.terrainContext ? [
+      "© DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+      "Modified clip: produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.",
+      "The organisations in charge of the Copernicus programme by law or by delegation do not incur any liability for any use of the Copernicus WorldDEM-30. Not endorsed by the Copernicus programme. License: documentation.dataspace.copernicus.eu/.../License-COPDEM-30.pdf",
+    ] : []),
   ].filter(Boolean);
 
   return (
@@ -1313,7 +1317,7 @@ function App() {
           <section className="ward-card" aria-label="Ward selection status">
             <div className="ward-card-top"><div className="card-label">ACTIVE STUDY AREA</div><span className="ward-stage">STAGE 1</span></div>
             <div className="ward-name">{wardName}</div>
-            <div className="ward-status"><span className={`status-pill ${localSourcePreview ? "selected" : "pending"}`} /> {localSourcePreview ? "Map data loaded" : "Study area selected"}</div>
+            <div className="ward-status"><span className={`status-pill ${boundaryLoaded ? "selected" : "pending"}`} /> {boundaryLoaded ? "Ward boundary loaded" : sceneState === "loading" ? "Loading ward boundary…" : sceneState === "error" ? "Ward boundary unavailable" : "Study area selected"}</div>
             <p>Mumbai, Maharashtra <span>·</span> Ward-scale planning workspace</p>
           </section>
 
